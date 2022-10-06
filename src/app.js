@@ -3,6 +3,7 @@ require('dotenv').config()
 const express = require('express')
 const path = require('path')
 const db = require('./db')
+const router = require('./routes')
 
 //express instance
 const app = express()
@@ -19,10 +20,8 @@ db.dBconnect()
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-//rotas
-app.get('/', (req, res) => {
-  res.render('index')
-})
+//routers
+app.use(router)
 
 
 module.exports = app
