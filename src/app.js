@@ -8,13 +8,16 @@ const router = require('./routes')
 //express instance
 const app = express()
 
-
-//defining static files
-app.use(express.static(path.join(__dirname, 'views')))
-app.use(express.static(path.join(__dirname, 'public')))
-
 //connecting database
 db.dBconnect()
+
+//defining engine
+app.set('view engine', 'ejs')
+
+//defining static files
+app.set('views', path.join(__dirname, 'views'))
+app.use(express.static(path.join(__dirname, 'public')))
+
 
 //backend setup
 app.use(express.urlencoded({ extended: true }))
