@@ -7,7 +7,9 @@ async function createUser(req, res) {
 
     
     user.save()
-    res.status(201).json({ user })
+    res.render('register', {
+        title: 'Página de Cadastro',
+    }).json({ user })
 
 }
 
