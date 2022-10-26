@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 function dBconnect() {
-  mongoose.connect(process.env.STRING_DB_CONNECTION)
+  mongoose.connect('mongodb://localhost:27017/banco-de-teste')
 
   const db = mongoose.connection
 
