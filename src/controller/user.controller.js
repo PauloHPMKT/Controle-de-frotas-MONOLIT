@@ -7,7 +7,7 @@ async function createUser(req, res) {
 
     
     user.save()
-    res.render('register', {
+    res.render('register/register.ejs', {
         title: 'Página de Cadastro',
     }).json({ user })
 
