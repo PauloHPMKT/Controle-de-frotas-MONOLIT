@@ -3,8 +3,7 @@ require('dotenv').config()
 const express = require('express')
 const path = require('path')
 const db = require('./db')
-const router = require('./routes')
-const userRouter = require('./routes/user.router')
+const appRouter = require('./routes/application.router')
 
 //express instance
 const app = express()
@@ -25,8 +24,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 //routers
-app.use(router)
-app.use(userRouter)
+app.use(appRouter)
 
 
 module.exports = app
