@@ -19,19 +19,6 @@ a {
   color: inherit;
 }
 
-.container-bg {
-  background-color: #1976D2;
-}
-
-main {
-  max-width: 1300px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
 .header {
   width: 100%;
   height: 64px;
@@ -66,4 +53,45 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.container-bg {
+  background-color: #1976D2;
+}
+
+main {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container-bg .menu-options ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-bg .menu-options ul li {
+  background-color: red;
+  width: 300px;
+  margin: 10px;
+  background-color: #063564;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+  transition: .2s ease-in-out;
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.507);
+}
+
+.container-bg .menu-options ul li a {
+  padding: 80px;
+}
+
+.container-bg .menu-options ul li:hover {
+  background-color: #074d92;
 }
