@@ -6,6 +6,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.281);
+  margin-bottom: 20px;
 }
 
 .header .navigation-bar {
@@ -20,7 +22,6 @@
 }
 
 .header .menu li {
-  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,6 +31,10 @@
 
 .header .menu li:active {
   background-color: #063564;
+}
+
+.header .menu li a {
+  padding: 20px;
 }
 
 .header .menu li i {
