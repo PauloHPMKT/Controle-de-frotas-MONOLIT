@@ -1,0 +1,45 @@
+.header {
+  color: #fff;
+  width: 100%;
+  background-color: #1976D2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header .navigation-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header .menu {
+  display: flex;
+}
+
+.header .menu li {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  transition: .1s ease-in;
+}
+
+.header .menu li:active {
+  background-color: #063564;
+}
+
+.header .menu li i {
+  margin-right: 10px;
+}
+
+.header .page-title {
+  padding: 7px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
