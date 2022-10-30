@@ -1,10 +1,21 @@
 const { Encript } = require('../helpers')
 const UserModel = require('../models/user.model')
 
-function getAllUsers(req, res) {
-    UserModel
+async function getAllUsers(req, res) {
+    await UserModel
         .find()
         .sort({ createdAt: -1 })
+        .populate('dept_id', 'name')
+        .exec((err, user) => {
+            if (err) res.status(400).send({ message: `${err.message}` })
+            else res.status(200).send(user)
+        })
+}
+
+async function getUserById(req, res) {
+    const { id } = req.params
+
+    await UserModel.find(id)
         .populate('dept_id', 'name')
         .exec((err, user) => {
             if (err) res.status(400).send({ message: `${err.message}` })
@@ -25,5 +36,6 @@ async function createUser(req, res) {
  
 module.exports = {
     getAllUsers,
+    getUserById,
     createUser,
 }
