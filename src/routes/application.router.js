@@ -2,55 +2,55 @@ const applicationRouter = require('express').Router()
 
 applicationRouter.get('/', (req, res) => {
     res.render('index', {
-        title: 'Pagina Inicial'
+        title: 'Home'
     })
 })
 
 applicationRouter.get('/funcionarios', (req, res) => {
     res.render('funcionarios', {
-        title: 'Página de funcionarios'
+        title: 'Funcionários'
     })
 })
 
 applicationRouter.get('/departamentos', (req, res) => {
     res.render('departamentos', {
-        title: 'Página de departamentos'
+        title: 'Departamentos'
     })
 })
 
 applicationRouter.get('/veiculos', (req, res) => {
     res.render('veiculos', {
-        title: 'Página de Veiculos'
+        title: 'Veículos'
     })
 })
 
 applicationRouter.get('/motoristas', (req, res) => {
     res.render('motoristas', {
-        title: 'Pagina de motoristas'
+        title: 'Motoristas'
     })
 })
 
 applicationRouter.get('/manutencoes', (req, res) => {
     res.render('manutencoes', {
-        title: 'Pagina de manutencoes',
+        title: 'Manutenção',
     })
 })
 
 applicationRouter.get('/multas', (req, res) => {
     res.render('multas', {
-        title: 'Pagina de multas',
+        title: 'Multas',
     })
 })
 
 applicationRouter.get('/solicitacoes', (req, res) => {
     res.render('solicitacoes', {
-        title: 'Pagina de solicitacoes',
+        title: 'Solicitações',
     })
 })
 
 applicationRouter.get('/locacoes', (req, res) => {
     res.render('locacoes', {
-        title: 'Pagina de Locações',
+        title: 'Locações',
     })
 })
 
