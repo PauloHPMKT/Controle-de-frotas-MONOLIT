@@ -8,6 +8,7 @@ const deptRouter = require('./routes/dept.router')
 const driverRouter = require('./routes/driver.router')
 const maintenanceRouter = require('./routes/maintenance.router')
 const peaceRouter = require('./routes/peaces.router')
+const rentRouter = require('./routes/rent.router')
 const infrationRouter = require('./routes/traffic_fine.router')
 const userRouter = require('./routes/user.router')
 const veicleRouter = require('./routes/veicle.router')
@@ -38,6 +39,7 @@ app.use(driverRouter)
 app.use(maintenanceRouter)
 app.use(peaceRouter)
 app.use(infrationRouter)
+app.use(rentRouter)
 
 
 module.exports = app
