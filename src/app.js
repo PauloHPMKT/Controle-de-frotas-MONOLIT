@@ -6,6 +6,7 @@ const db = require('./db')
 const appRouter = require('./routes/application.router')
 const deptRouter = require('./routes/dept.router')
 const driverRouter = require('./routes/driver.router')
+const maintenanceRouter = require('./routes/maintenance.router')
 const userRouter = require('./routes/user.router')
 const veicleRouter = require('./routes/veicle.router')
 
@@ -32,6 +33,7 @@ app.use(userRouter)
 app.use(deptRouter)
 app.use(veicleRouter)
 app.use(driverRouter)
+app.use(maintenanceRouter)
 
 
 module.exports = app
