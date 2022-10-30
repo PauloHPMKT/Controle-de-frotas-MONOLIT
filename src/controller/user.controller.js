@@ -15,7 +15,7 @@ async function getAllUsers(req, res) {
 async function getUserById(req, res) {
     const { id } = req.params
 
-    await UserModel.find(id)
+    await UserModel.findById(id)
         .populate('dept_id', 'name')
         .exec((err, user) => {
             if (err) res.status(400).send({ message: `${err.message}` })
