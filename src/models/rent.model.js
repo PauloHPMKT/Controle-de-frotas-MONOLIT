@@ -8,7 +8,7 @@ const schema = new mongoose.Schema({
     outter_km: Number,
     arriving_km: Number,
     event_type: String,
-    event_time: Date,
+    event_id: { type: mongoose.Schema.Types.ObjectId, ref: 'solicitacoes' },
     driver_id: { type: mongoose.Schema.Types.ObjectId, ref: 'motoristas' },
 })
 
