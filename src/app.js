@@ -5,6 +5,7 @@ const path = require('path')
 const db = require('./db')
 const appRouter = require('./routes/application.router')
 const deptRouter = require('./routes/dept.router')
+const driverRouter = require('./routes/driver.router')
 const userRouter = require('./routes/user.router')
 const veicleRouter = require('./routes/veicle.router')
 
@@ -21,7 +22,6 @@ app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
 app.use(express.static(path.join(__dirname, 'public')))
 
-
 //backend setup
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
@@ -31,6 +31,7 @@ app.use(appRouter)
 app.use(userRouter)
 app.use(deptRouter)
 app.use(veicleRouter)
+app.use(driverRouter)
 
 
 module.exports = app
