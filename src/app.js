@@ -6,6 +6,7 @@ const db = require('./db')
 const appRouter = require('./routes/application.router')
 const deptRouter = require('./routes/dept.router')
 const userRouter = require('./routes/user.router')
+const veicleRouter = require('./routes/veicle.router')
 
 //express instance
 const app = express()
@@ -29,6 +30,7 @@ app.use(express.json())
 app.use(appRouter)
 app.use(userRouter)
 app.use(deptRouter)
+app.use(veicleRouter)
 
 
 module.exports = app
