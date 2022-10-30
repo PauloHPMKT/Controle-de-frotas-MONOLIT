@@ -4,11 +4,11 @@ const schema = new mongoose.Schema({
     cod: { type: Number, unique: true },
     manufacturer: String,
     model: String,
-    ano: Number,
+    year: Number,
     categorie: String,
     headlight: String,
     change: String,
-    seats: String,
+    seats: Number,
     chassis: String,
     code_board: String,
     fuel: String,
@@ -19,4 +19,4 @@ const schema = new mongoose.Schema({
 
 const VeicleModel = mongoose.model('veiculos', schema)
 
-module.exports = VeicleModel
+module.exports = VeicleModel 
