@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const schema = new mongoose.Schema({
-    cod: Number,
+    cod: { type: Number, unique: true },
     name: String,
     email: String,
     cpf: String,
