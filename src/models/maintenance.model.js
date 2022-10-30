@@ -7,7 +7,9 @@ const schema = new mongoose.Schema({
     reason: String,
     observation: String,
     driver_id: { type: mongoose.Schema.Types.ObjectId, ref: 'usuarios' },
-    veicle_id: { type: mongoose.Schema.Types.ObjectId, ref: 'veiculos' }
+    veicle_id: { type: mongoose.Schema.Types.ObjectId, ref: 'veiculos' },
+    peace_id: { type: mongoose.Schema.Types.ObjectId, ref: 'pecas' },
+    garantee: Number,
 })
 
 const MaintenanceModel = mongoose.model('manutencao', schema)
