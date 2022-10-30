@@ -1,18 +1,17 @@
+const { Encript } = require('../helpers')
 const UserModel = require('../models/user.model')
 
 async function createUser(req, res) {
-    const { name, email, password } = req.body
+    const { ...data } = req.body
 
-    const user = new UserModel({ name, email, password })
+    const hashingPassword = await Encript.EncodePass(data.password)
 
+    const user = new UserModel({ ...data, password: hashingPassword })
     
     user.save()
-    res.render('register/register.ejs', {
-        title: 'Página de Cadastro',
-    }).json({ user })
-
+    res.json({ user })
 }
-
+ 
 module.exports = {
     createUser,
 }
